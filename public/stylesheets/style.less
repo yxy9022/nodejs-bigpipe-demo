@@ -1,0 +1,89 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 13px;
+  //background: #efefef;
+  min-width: 768px;
+}
+
+.bpe-top {
+  background: rgba(18, 26, 44, 0.8);
+  height: 60px;
+  color: #ffffff;
+  display: flex;
+  align-items: center; //垂直居中
+
+  .logo {
+    padding-left: 15px;
+    padding-right: 5px;
+  }
+
+  .logo-title {
+    font-size: 20px;
+  }
+}
+
+.bpe-content {
+  border: 1px solid steelblue;
+  .pagelet {
+    padding: 10px 15px;
+  }
+  .pagelet-divder{
+    height: 20px;
+  }
+  .pagelet-title {
+    padding-left: 5px;
+    padding-right: 10px;
+    color: midnightblue;
+  }
+  .pagelet-title h5 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid steelblue;
+  }
+  .pageletl01 {
+    color: #337ab7;
+  }
+  //.pageletl02 {
+  //  background-color: lightblue;
+  //}
+  //.pageletl03 {
+  //  background-color: lightsteelblue;
+  //}
+  //.pageletm01 {
+  //  background-color: lightgoldenrodyellow;
+  //}
+  //.pageletm02 {
+  //  background-color: lightskyblue;
+  //}
+  //.pageletr01 {
+  //  background-color: lightseagreen;
+  //}
+  //.pageletr02 {
+  //  background-color: white;
+  //}
+  .pagelet-loading {
+    padding: 30px 15px;
+  }
+
+  .loading {
+    -webkit-animation: circle 1.5s infinite linear; /*匀速 循环*/
+  }
+
+  @-webkit-keyframes circle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .article-list{
+    list-style: none;
+    padding-left: 15px;
+
+    li{
+      padding-top: 10px;
+    }
+  }
+}

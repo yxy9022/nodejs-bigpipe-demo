@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bigpipe技术应用</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.3/lodash.min.js"></script>
+    <script src="https://use.fontawesome.com/dfbc06ace2.js"></script>
+    <script src="js/bigpipe.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+</head>
+<body>
+<div class="container">
+    <!--头部-->
+    <div class="row bpe-top">
+        <div class="bpe-top-nav">
+            <span class="logo"><i class="fa fa-leaf fa-2x"></i></span>
+            <span class="logo-title">BigPipe技术应用demo</span>
+        </div>
+    </div>
+
+    <!--内容区-->
+    <div class="row bpe-content">
+        <!--左-->
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row pagelet pageletl01" id="pageletl01">
+                        <div class="pagelet-loading"><i class="fa fa-spinner loading"></i><span>  加载中...</span></div>
+                    </div>
+                    <script type="text/template" id="tplel01">
+                        <p><i class="fa fa-user fa-2x" style="color: #337ab7;"></i><span style="font-size:18px;"> <%=user.name%></span></p>
+                        <p><%=user.gender%> <span><%=user.starsign%></span></p>
+                        <p><span style="color: #333;">爱好：</span><%=user.fav%></p>
+                        <p><span style="color: #333;">个性签名:</span><br><%=user.signature%></p>
+                        <a href="http://www.cnblogs.com/fhen/" target="_blank"><i class="fa fa-wordpress"></i> 我的博客</a>
+                    </script>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row pagelet-divder"></div>
+                    <div class="row pagelet-title">
+                        <h5><i class="fa fa-yelp"></i>  blahblahblah<small>(3s)</small></h5>
+                    </div>
+                    <div class="row pagelet pageletl02" id="pageletl02">
+                        <div class="pagelet-loading"><i class="fa fa-spinner loading"></i><span>  加载中...</span></div>
+                    </div>
+                    <script type="text/template" id="tplel02">
+                        <p>几个随机数而已。</p>
+                        <p><%for(var i=0;i<blahs.length;i++){%>
+                        <span><%=blahs[i]%></span>
+                        <%}%>
+                        </p>
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!--中-->
+        <div class="col-md-7 col-sm-7 col-xs-7" style="border-left:1px solid steelblue">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row pagelet-title"><h5><i class="fa fa-info"></i> demo说明<small>(1s)</small></h5></div>
+                    <div class="row pagelet pageletm01" id="pageletm01">
+                        <div class="pagelet-loading"><i class="fa fa-spinner loading"></i><span>  加载中...</span></div>
+                    </div>
+                    <script type="text/template" id="tplem01">
+                        <div style="font-size: 16px;">
+                            <p>这是使用node.js+Express+BigPipe技术应用的demo。</p>
+                            <p>整个页面被分成了几个小的pagelet，大家可以看到效果，整个页面最先加载出来，然后是各个pagelet板块逐渐的加载显示出来，各板块的显示速度是我模拟延时做的,[用户信息]延时0.5s,其它板块标题后面小括号中是模拟的延时时间。</p>
+                            <h5><a href="https://github.com/jerry9022/nodejs-bigpipe-demo" target="_blank">源代码地址：https://github.com/jerry9022/nodejs-bigpipe-demo</a></h5>
+                        </div>
+                    </script>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row pagelet-title"><h5><i class="fa fa-list"></i>  一个板块<small>(7s)</small></h5></div>
+                    <div class="row pagelet pageletm02" id="pageletm02">
+                        <div class="pagelet-loading"><i class="fa fa-spinner loading"></i><span>  加载中...</span></div>
+                    </div>
+                    <script type="text/template" id="tplem02">
+                        <div>
+                            <p>nothing,just a test</p>
+                            <p>没什么，只是一个测试</p>
+                        </div>
+                    </script>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row pagelet-title"><h5><i class="fa fa-link"></i>  一些链接<small>(3s)</small></h5></div>
+                    <div class="row pagelet pageletm02" id="pageletm03">
+                        <div class="pagelet-loading"><i class="fa fa-spinner loading"></i><span>  加载中...</span></div>
+                    </div>
+                    <script type="text/template" id="tplem03">
+                        <div>
+                            <ul class="article-list">
+                                <%articles.forEach(function(item){%>
+                                <li><a href="<%=item.link%>" target="_blank"><%=item.name%></a></li>
+                                <%})%>
+                            </ul>
+                        </div>
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!--右-->
+        <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row pagelet-title"><h5><i class="fa fa-file"></i>  BigPipe介绍<small>(2s)</small></h5></div>
+                    <div class="row pagelet pageletr01" id="pageletr01">
+                        <div class="pagelet-loading"><i class="fa fa-spinner loading"></i><span>  加载中...</span></div>
+                    </div>
+                    <script type="text/template" id="tpler01">
+                        <p>BigPipe是一个重新设计的基础动态网页服务体系。大体思路是，分解网页成叫做Pagelets的小块，然后通过Web服务器和浏览器建立管道并管理他们在不同阶段的运行。这是类似于大多数现代微处理器的流水线执行过程：多重指令管线通过不同的处理器执行单元，以达到性能的最佳。</p>
+                    </script>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row pagelet-title"><h5><i class="fa fa-star"></i>  另一个板块<small>(5s)</small></h5></div>
+                    <div class="row pagelet pageletr02" id="pageletr02">
+                        <div class="pagelet-loading"><i class="fa fa-spinner loading"></i><span>  加载中...</span></div>
+                    </div>
+                    <script type="text/template" id="tpler02">
+                        <p>BigPipe 比AJAX 有三个好处：</p>
+                        <p>1、BigPipe 技术使浏览器并不需要发送XMLHttpRequest 请求，这样就节省时间损耗。</p>
+                        <p>2、使用BigPipe，浏览器和服务器可以并行同时工作，服务器不需要等待浏览器的请求，这就会使效率得到更大的提高。</p>
+                        <p>3、减少浏览器发送到请求，同样会带来很大的性能提升</p>
+                    </script>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row pagelet-title"><h5><i class="fa fa-tree"></i>  再一个版块<small>(4s)</small></h5></div>
+                    <div class="row pagelet pageletr02" id="pageletr03">
+                        <div class="pagelet-loading"><i class="fa fa-spinner loading"></i><span>  加载中...</span></div>
+                    </div>
+                    <script type="text/template" id="tpler03">
+                        <h5>测试测试</h5>
+                        <h5>哈哈哈哈</h5>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script>
+  var bigpipe = new Bigpipe();
+  bigpipe.ready('pageletl01', function (data) {
+    $('#pageletl01').html(_.template($("#tplel01").html())({"user": data}));
+  });
+  bigpipe.ready('pageletl02', function (data) {
+    console.log(data);
+    $('#pageletl02').html(_.template($("#tplel02").html())({"blahs": data}));
+  });
+
+  bigpipe.ready('tppageletm01', function (data) {
+    $('#pageletm01').html(_.template($("#tplem01").html()));
+  });
+  bigpipe.ready('tppageletm02', function (data) {
+    $('#pageletm02').html(_.template($("#tplem02").html()));
+  });
+  bigpipe.ready('tppageletm03', function (data) {
+    $('#pageletm03').html(_.template($("#tplem03").html())({"articles": data}));
+  });
+
+  bigpipe.ready('pageletr01', function (data) {
+    $('#pageletr01').html(_.template($("#tpler01").html()));
+  });
+  bigpipe.ready('pageletr02', function (data) {
+    $('#pageletr02').html(_.template($("#tpler02").html()));
+  });
+  bigpipe.ready('pageletr03', function (data) {
+    $('#pageletr03').html(_.template($("#tpler03").html()));
+  });
+</script>
+
+</html>
