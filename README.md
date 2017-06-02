@@ -3,7 +3,7 @@
    
 整个页面被分成了几个小的**pagelet**，从演示例子中大家可以看到效果，整个页面最先加载出来，然后是各个pagelet板块逐渐的加载显示出来，各板块的显示速度是模拟延时做的,[用户信息]延时0.5s,其它板块标题后面小括号中是模拟的延时时间。
 演示地址：[http://bigpipe.ipyro.cn](http://bigpipe.ipyro.cn) .
-![](http://bigpipe.ipyro.cn/images/1.jpeg)
+![](http://bigpipe.ipyro.cn/images/1.jpg)
 
 - - -
 
