@@ -7,7 +7,7 @@ var fs = require('fs');
 /* GET home page. */
 router.get('/', function (req, res) {
 
-  var lay = fs.readFileSync(path.resolve('templetes/layout.html'), 'utf-8');
+  var lay = fs.readFileSync(path.resolve(__dirname,'../templetes/layout.html'), 'utf-8');
   //TODO 可以做一下缓存
   res.setHeader('content-type', 'text/html; charset=utf-8');
   res.write(lay);
