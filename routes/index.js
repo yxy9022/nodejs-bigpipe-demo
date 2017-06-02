@@ -15,7 +15,7 @@ router.get('/', function (req, res) {
   async.parallel([function (cb) {
     setTimeout(function () {
       // console.log('----pageletl01----');
-      res.write('<script>bigpipe.set("pageletl01",{"name":"风车车jerry","gender":"男","starsign":"天秤座","fav":"编程、旅游、玩游戏、看电影、听音乐","signature":"努力奋斗，为爱生活"});</script>');
+      res.write('<script>bigpipe.set("pageletl01",{"name":"风车车jerry","gender":"男","starsign":"天秤座","fav":"编程、旅游、玩游戏、看电影、听音乐","email":"jerry9022@qq.com"});</script>');
       cb(null);
     }, 500)
   }, function (cb) {
