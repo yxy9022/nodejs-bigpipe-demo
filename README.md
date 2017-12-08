@@ -5,7 +5,7 @@
 
 演示地址：[http://bigpipe.ipyro.cn](http://bigpipe.ipyro.cn) .
 
-![](http://bigpipe.ipyro.cn/images/1.jpg)
+![Mou icon](http://bigpipe.ipyro.cn/images/1.jpg)
 
 - - -
 

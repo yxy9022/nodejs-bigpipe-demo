@@ -2,12 +2,14 @@
 <html>
 <head>
     <title>bigpipe技术应用</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="https://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bootstrap/css/font-awesome.min.css">
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcss.com/lodash.js/4.17.3/lodash.min.js"></script>
-    <script src="https://use.fontawesome.com/dfbc06ace2.js"></script>
-    <script src="js/bigpipe.js"></script>
+    <script src="/js/bigpipe.js"></script>
     <link rel="stylesheet" href="/stylesheets/style.css"/>
 </head>
 <body>
@@ -140,7 +142,7 @@
 
 </div>
 </body>
-<script>
+<script type="text/javascript">
   var bigpipe = new Bigpipe();
   bigpipe.ready('pageletl01', function (data) {
     $('#pageletl01').html(_.template($("#tplel01").html())({"user": data}));
